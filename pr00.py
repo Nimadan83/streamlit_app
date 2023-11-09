@@ -32,9 +32,9 @@ st_lottie(x,height = 200)
 
 def img(img_1):
     smallest_dir = None
-    for file in os.listdir('C:/pr00/new_database'):
+    for file in os.listdir('new_database'):
         if file.endswith(".jpg"):
-            w = f"C:/pr00/new_database/{file}"
+            w = f"new_database/{file}"
             x = DeepFace.verify(img_1, w)
             if x['verified']:
                 st.write("to khode ", file.split('.')[0], "hasti")
@@ -47,7 +47,7 @@ def img(img_1):
                 smallest_dir = (file.split('.')[0], x['distance']) if x['distance'] < smallest_dir[1] else smallest_dir
     else:
         st.write(f"to shabihe  {smallest_dir[0]} hasti")
-        IMAGE = Image.open(f"C:/pr00/new_database/{smallest_dir[0]}.jpg")
+        IMAGE = Image.open(f"new_database/{smallest_dir[0]}.jpg")
         st.image(IMAGE)
         
         
