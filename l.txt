@@ -1,0 +1,6 @@
+os
+deepface
+numpy
+PIL
+streamlit_lottie
+requests
